@@ -50,7 +50,7 @@ API:      http://localhost:8080/api/v1/health
 CLI:      bash services/shell-cli/sysctl.sh status
 ```
 
-The CLI uses the Nginx `/api` route by default. See [ENTRYPOINT.md](ENTRYPOINT.md)
+The CLI uses the Nginx `/api` route by default. See [ENTRYPOINT.md](services/ENTRYPOINT.md)
 for the network path and Docker Desktop troubleshooting.
 
 ## Port-Forward Fallback
@@ -133,5 +133,5 @@ sysctl status
 
 The CLI prints `SUCCESS` for a 2xx response and returns a nonzero exit code for
 connection, HTTP, or argument errors. API details are in
-[CONTROL-PLANE.md](CONTROL-PLANE.md); load-test details are in
-[LOADGEN.md](LOADGEN.md).
+[CONTROL-PLANE.md](services/control-plane/CONTROL-PLANE.md); load-test details are in
+[LOADGEN.md](services/loadgen/LOADGEN.md).

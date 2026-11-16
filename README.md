@@ -145,7 +145,7 @@ WORDLE_DELAY_MS=50
 ```
 
 A pod can process four requests concurrently, with each request taking about
-50 ms. This creates a reproducible capacity target across student machines.
+50 ms. This creates a reproducible capacity target across different machines.
 Compare tests such as:
 
 1. Run a test with three Wordle replicas.
@@ -154,8 +154,6 @@ Compare tests such as:
 4. Repeat the same RPS, duration, and word.
 5. Compare the results.
 
-The system also demonstrates Kubernetes self-healing: deleting a managed pod
-causes its Deployment to create a replacement.
 
 ## Request Routing
 
@@ -186,14 +184,12 @@ replaceable.
 
 - [DEPLOYMENT.md](DEPLOYMENT.md): build, deployment, access, and CLI/API reference.
 - [ENTRYPOINT.md](services/ENTRYPOINT.md): Docker Desktop entry point and networking.
-- [ARCHITECTURE.md](ARCHITECTURE.md): system architecture and Kubernetes
-  concepts.
+- [ARCHITECTURE.md](ARCHITECTURE.md): system architecture and Kubernetes concepts.
 - [CONTROL-PLANE.md](services/control-plane/CONTROL-PLANE.md): control-plane responsibilities,
   permissions, and API.
 - [LOADGEN.md](services/loadgen/LOADGEN.md): load-test request/result schemas and experiments.
 - [METRICS-DESIGN.MD](services/web/METRICS-DESIGN.MD): metrics collection and dashboard
   design.
-- [TODO.md](TODO.md): remaining cleanup work.
 
 ## Troubleshooting
 
